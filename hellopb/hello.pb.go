@@ -123,6 +123,446 @@ func (x *HelloResponse) GetGreeting() string {
 	return ""
 }
 
+type CreateGraphRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Size     int32  `protobuf:"varint,1,opt,name=size,proto3" json:"size,omitempty"`
+	ClientId string `protobuf:"bytes,2,opt,name=clientId,proto3" json:"clientId,omitempty"`
+}
+
+func (x *CreateGraphRequest) Reset() {
+	*x = CreateGraphRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateGraphRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateGraphRequest) ProtoMessage() {}
+
+func (x *CreateGraphRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateGraphRequest.ProtoReflect.Descriptor instead.
+func (*CreateGraphRequest) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *CreateGraphRequest) GetSize() int32 {
+	if x != nil {
+		return x.Size
+	}
+	return 0
+}
+
+func (x *CreateGraphRequest) GetClientId() string {
+	if x != nil {
+		return x.ClientId
+	}
+	return ""
+}
+
+type CreateGraphResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	GraphId string `protobuf:"bytes,1,opt,name=graphId,proto3" json:"graphId,omitempty"`
+}
+
+func (x *CreateGraphResponse) Reset() {
+	*x = CreateGraphResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateGraphResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateGraphResponse) ProtoMessage() {}
+
+func (x *CreateGraphResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateGraphResponse.ProtoReflect.Descriptor instead.
+func (*CreateGraphResponse) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *CreateGraphResponse) GetGraphId() string {
+	if x != nil {
+		return x.GraphId
+	}
+	return ""
+}
+
+type AddEdgeRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	GraphId  string `protobuf:"bytes,1,opt,name=graphId,proto3" json:"graphId,omitempty"`
+	ClientId string `protobuf:"bytes,2,opt,name=clientId,proto3" json:"clientId,omitempty"`
+	VertexA  int32  `protobuf:"varint,3,opt,name=vertexA,proto3" json:"vertexA,omitempty"`
+	VertexB  int32  `protobuf:"varint,4,opt,name=vertexB,proto3" json:"vertexB,omitempty"`
+}
+
+func (x *AddEdgeRequest) Reset() {
+	*x = AddEdgeRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AddEdgeRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddEdgeRequest) ProtoMessage() {}
+
+func (x *AddEdgeRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddEdgeRequest.ProtoReflect.Descriptor instead.
+func (*AddEdgeRequest) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *AddEdgeRequest) GetGraphId() string {
+	if x != nil {
+		return x.GraphId
+	}
+	return ""
+}
+
+func (x *AddEdgeRequest) GetClientId() string {
+	if x != nil {
+		return x.ClientId
+	}
+	return ""
+}
+
+func (x *AddEdgeRequest) GetVertexA() int32 {
+	if x != nil {
+		return x.VertexA
+	}
+	return 0
+}
+
+func (x *AddEdgeRequest) GetVertexB() int32 {
+	if x != nil {
+		return x.VertexB
+	}
+	return 0
+}
+
+type AddEdgeResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+}
+
+func (x *AddEdgeResponse) Reset() {
+	*x = AddEdgeResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AddEdgeResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddEdgeResponse) ProtoMessage() {}
+
+func (x *AddEdgeResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddEdgeResponse.ProtoReflect.Descriptor instead.
+func (*AddEdgeResponse) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *AddEdgeResponse) GetSuccess() bool {
+	if x != nil {
+		return x.Success
+	}
+	return false
+}
+
+type GetSPFRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	GraphId  string `protobuf:"bytes,1,opt,name=graphId,proto3" json:"graphId,omitempty"`
+	ClientId string `protobuf:"bytes,2,opt,name=clientId,proto3" json:"clientId,omitempty"`
+	VertexA  int32  `protobuf:"varint,3,opt,name=vertexA,proto3" json:"vertexA,omitempty"`
+	VertexB  int32  `protobuf:"varint,4,opt,name=vertexB,proto3" json:"vertexB,omitempty"`
+}
+
+func (x *GetSPFRequest) Reset() {
+	*x = GetSPFRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetSPFRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetSPFRequest) ProtoMessage() {}
+
+func (x *GetSPFRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetSPFRequest.ProtoReflect.Descriptor instead.
+func (*GetSPFRequest) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *GetSPFRequest) GetGraphId() string {
+	if x != nil {
+		return x.GraphId
+	}
+	return ""
+}
+
+func (x *GetSPFRequest) GetClientId() string {
+	if x != nil {
+		return x.ClientId
+	}
+	return ""
+}
+
+func (x *GetSPFRequest) GetVertexA() int32 {
+	if x != nil {
+		return x.VertexA
+	}
+	return 0
+}
+
+func (x *GetSPFRequest) GetVertexB() int32 {
+	if x != nil {
+		return x.VertexB
+	}
+	return 0
+}
+
+type GetSPFResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Distance int32 `protobuf:"varint,1,opt,name=distance,proto3" json:"distance,omitempty"`
+}
+
+func (x *GetSPFResponse) Reset() {
+	*x = GetSPFResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetSPFResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetSPFResponse) ProtoMessage() {}
+
+func (x *GetSPFResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetSPFResponse.ProtoReflect.Descriptor instead.
+func (*GetSPFResponse) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *GetSPFResponse) GetDistance() int32 {
+	if x != nil {
+		return x.Distance
+	}
+	return 0
+}
+
+type DeleteGraphRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	GraphId  string `protobuf:"bytes,1,opt,name=graphId,proto3" json:"graphId,omitempty"`
+	ClientId string `protobuf:"bytes,2,opt,name=clientId,proto3" json:"clientId,omitempty"`
+}
+
+func (x *DeleteGraphRequest) Reset() {
+	*x = DeleteGraphRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *DeleteGraphRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*DeleteGraphRequest) ProtoMessage() {}
+
+func (x *DeleteGraphRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use DeleteGraphRequest.ProtoReflect.Descriptor instead.
+func (*DeleteGraphRequest) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *DeleteGraphRequest) GetGraphId() string {
+	if x != nil {
+		return x.GraphId
+	}
+	return ""
+}
+
+func (x *DeleteGraphRequest) GetClientId() string {
+	if x != nil {
+		return x.ClientId
+	}
+	return ""
+}
+
+type DeleteGraphResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+}
+
+func (x *DeleteGraphResponse) Reset() {
+	*x = DeleteGraphResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hellopb_hello_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *DeleteGraphResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*DeleteGraphResponse) ProtoMessage() {}
+
+func (x *DeleteGraphResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_hellopb_hello_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use DeleteGraphResponse.ProtoReflect.Descriptor instead.
+func (*DeleteGraphResponse) Descriptor() ([]byte, []int) {
+	return file_hellopb_hello_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *DeleteGraphResponse) GetSuccess() bool {
+	if x != nil {
+		return x.Success
+	}
+	return false
+}
+
 var File_hellopb_hello_proto protoreflect.FileDescriptor
 
 var file_hellopb_hello_proto_rawDesc = []byte{
@@ -132,13 +572,72 @@ var file_hellopb_hello_proto_rawDesc = []byte{
 	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
 	0x22, 0x2b, 0x0a, 0x0d, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
 	0x65, 0x12, 0x1a, 0x0a, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x32, 0x44, 0x0a,
-	0x0c, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x34, 0x0a,
-	0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x13, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x68,
-	0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x14, 0x2e, 0x68, 0x65,
-	0x6c, 0x6c, 0x6f, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x42, 0x09, 0x5a, 0x07, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x70, 0x62, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x01, 0x28, 0x09, 0x52, 0x08, 0x67, 0x72, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x22, 0x44, 0x0a,
+	0x12, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x73, 0x69, 0x7a, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x05, 0x52, 0x04, 0x73, 0x69, 0x7a, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x63, 0x6c, 0x69, 0x65, 0x6e,
+	0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x6c, 0x69, 0x65, 0x6e,
+	0x74, 0x49, 0x64, 0x22, 0x2f, 0x0a, 0x13, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72, 0x61,
+	0x70, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x67, 0x72,
+	0x61, 0x70, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x67, 0x72, 0x61,
+	0x70, 0x68, 0x49, 0x64, 0x22, 0x7a, 0x0a, 0x0e, 0x61, 0x64, 0x64, 0x45, 0x64, 0x67, 0x65, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x67, 0x72, 0x61, 0x70, 0x68, 0x49,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x67, 0x72, 0x61, 0x70, 0x68, 0x49, 0x64,
+	0x12, 0x1a, 0x0a, 0x08, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07,
+	0x76, 0x65, 0x72, 0x74, 0x65, 0x78, 0x41, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x07, 0x76,
+	0x65, 0x72, 0x74, 0x65, 0x78, 0x41, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x74, 0x65, 0x78,
+	0x42, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x52, 0x07, 0x76, 0x65, 0x72, 0x74, 0x65, 0x78, 0x42,
+	0x22, 0x2b, 0x0a, 0x0f, 0x61, 0x64, 0x64, 0x45, 0x64, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x22, 0x79, 0x0a,
+	0x0d, 0x67, 0x65, 0x74, 0x53, 0x50, 0x46, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18,
+	0x0a, 0x07, 0x67, 0x72, 0x61, 0x70, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x07, 0x67, 0x72, 0x61, 0x70, 0x68, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x63, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x74, 0x65, 0x78, 0x41, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x07, 0x76, 0x65, 0x72, 0x74, 0x65, 0x78, 0x41, 0x12, 0x18,
+	0x0a, 0x07, 0x76, 0x65, 0x72, 0x74, 0x65, 0x78, 0x42, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x52,
+	0x07, 0x76, 0x65, 0x72, 0x74, 0x65, 0x78, 0x42, 0x22, 0x2c, 0x0a, 0x0e, 0x67, 0x65, 0x74, 0x53,
+	0x50, 0x46, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x64, 0x69,
+	0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x08, 0x64, 0x69,
+	0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x22, 0x4a, 0x0a, 0x12, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65,
+	0x47, 0x72, 0x61, 0x70, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07,
+	0x67, 0x72, 0x61, 0x70, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x67,
+	0x72, 0x61, 0x70, 0x68, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74,
+	0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74,
+	0x49, 0x64, 0x22, 0x2f, 0x0a, 0x13, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70,
+	0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x75, 0x63,
+	0x63, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63,
+	0x65, 0x73, 0x73, 0x32, 0x44, 0x0a, 0x0c, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x53, 0x65, 0x72, 0x76,
+	0x69, 0x63, 0x65, 0x12, 0x34, 0x0a, 0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x13, 0x2e, 0x68,
+	0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x14, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x32, 0x5c, 0x0a, 0x12, 0x63, 0x72, 0x65,
+	0x61, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
+	0x46, 0x0a, 0x0b, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x12, 0x19,
+	0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72, 0x61,
+	0x70, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x68, 0x65, 0x6c, 0x6c,
+	0x6f, 0x2e, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x32, 0x58, 0x0a, 0x13, 0x61, 0x64, 0x64, 0x45, 0x64,
+	0x67, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x41,
+	0x0a, 0x0e, 0x41, 0x64, 0x64, 0x45, 0x64, 0x67, 0x65, 0x54, 0x6f, 0x47, 0x72, 0x61, 0x70, 0x68,
+	0x12, 0x15, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x61, 0x64, 0x64, 0x45, 0x64, 0x67, 0x65,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e,
+	0x61, 0x64, 0x64, 0x45, 0x64, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
+	0x00, 0x32, 0x56, 0x0a, 0x12, 0x67, 0x65, 0x74, 0x53, 0x50, 0x46, 0x47, 0x72, 0x61, 0x70, 0x68,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x40, 0x0a, 0x0f, 0x47, 0x65, 0x74, 0x53, 0x50,
+	0x46, 0x46, 0x72, 0x6f, 0x6d, 0x47, 0x72, 0x61, 0x70, 0x68, 0x12, 0x14, 0x2e, 0x68, 0x65, 0x6c,
+	0x6c, 0x6f, 0x2e, 0x67, 0x65, 0x74, 0x53, 0x50, 0x46, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x15, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x67, 0x65, 0x74, 0x53, 0x50, 0x46, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x32, 0x5c, 0x0a, 0x12, 0x64, 0x65, 0x6c,
+	0x65, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
+	0x46, 0x0a, 0x0b, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x12, 0x19,
+	0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x61,
+	0x70, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x68, 0x65, 0x6c, 0x6c,
+	0x6f, 0x2e, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x61, 0x70, 0x68, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a, 0x07, 0x68, 0x65, 0x6c, 0x6c, 0x6f,
+	0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -153,16 +652,32 @@ func file_hellopb_hello_proto_rawDescGZIP() []byte {
 	return file_hellopb_hello_proto_rawDescData
 }
 
-var file_hellopb_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_hellopb_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_hellopb_hello_proto_goTypes = []interface{}{
-	(*HelloRequest)(nil),  // 0: hello.helloRequest
-	(*HelloResponse)(nil), // 1: hello.helloResponse
+	(*HelloRequest)(nil),        // 0: hello.helloRequest
+	(*HelloResponse)(nil),       // 1: hello.helloResponse
+	(*CreateGraphRequest)(nil),  // 2: hello.createGraphRequest
+	(*CreateGraphResponse)(nil), // 3: hello.createGraphResponse
+	(*AddEdgeRequest)(nil),      // 4: hello.addEdgeRequest
+	(*AddEdgeResponse)(nil),     // 5: hello.addEdgeResponse
+	(*GetSPFRequest)(nil),       // 6: hello.getSPFRequest
+	(*GetSPFResponse)(nil),      // 7: hello.getSPFResponse
+	(*DeleteGraphRequest)(nil),  // 8: hello.deleteGraphRequest
+	(*DeleteGraphResponse)(nil), // 9: hello.deleteGraphResponse
 }
 var file_hellopb_hello_proto_depIdxs = []int32{
 	0, // 0: hello.helloService.Hello:input_type -> hello.helloRequest
-	1, // 1: hello.helloService.Hello:output_type -> hello.helloResponse
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	2, // 1: hello.createGraphService.CreateGraph:input_type -> hello.createGraphRequest
+	4, // 2: hello.addEdgeGraphService.AddEdgeToGraph:input_type -> hello.addEdgeRequest
+	6, // 3: hello.getSPFGraphService.GetSPFFromGraph:input_type -> hello.getSPFRequest
+	8, // 4: hello.deleteGraphService.DeleteGraph:input_type -> hello.deleteGraphRequest
+	1, // 5: hello.helloService.Hello:output_type -> hello.helloResponse
+	3, // 6: hello.createGraphService.CreateGraph:output_type -> hello.createGraphResponse
+	5, // 7: hello.addEdgeGraphService.AddEdgeToGraph:output_type -> hello.addEdgeResponse
+	7, // 8: hello.getSPFGraphService.GetSPFFromGraph:output_type -> hello.getSPFResponse
+	9, // 9: hello.deleteGraphService.DeleteGraph:output_type -> hello.deleteGraphResponse
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -198,6 +713,102 @@ func file_hellopb_hello_proto_init() {
 				return nil
 			}
 		}
+		file_hellopb_hello_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CreateGraphRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CreateGraphResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AddEdgeRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AddEdgeResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetSPFRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetSPFResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*DeleteGraphRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hellopb_hello_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*DeleteGraphResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -205,9 +816,9 @@ func file_hellopb_hello_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_hellopb_hello_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   10,
 			NumExtensions: 0,
-			NumServices:   1,
+			NumServices:   5,
 		},
 		GoTypes:           file_hellopb_hello_proto_goTypes,
 		DependencyIndexes: file_hellopb_hello_proto_depIdxs,
@@ -293,6 +904,294 @@ var _HelloService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Hello",
 			Handler:    _HelloService_Hello_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "hellopb/hello.proto",
+}
+
+// CreateGraphServiceClient is the client API for CreateGraphService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type CreateGraphServiceClient interface {
+	CreateGraph(ctx context.Context, in *CreateGraphRequest, opts ...grpc.CallOption) (*CreateGraphResponse, error)
+}
+
+type createGraphServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCreateGraphServiceClient(cc grpc.ClientConnInterface) CreateGraphServiceClient {
+	return &createGraphServiceClient{cc}
+}
+
+func (c *createGraphServiceClient) CreateGraph(ctx context.Context, in *CreateGraphRequest, opts ...grpc.CallOption) (*CreateGraphResponse, error) {
+	out := new(CreateGraphResponse)
+	err := c.cc.Invoke(ctx, "/hello.createGraphService/CreateGraph", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CreateGraphServiceServer is the server API for CreateGraphService service.
+type CreateGraphServiceServer interface {
+	CreateGraph(context.Context, *CreateGraphRequest) (*CreateGraphResponse, error)
+}
+
+// UnimplementedCreateGraphServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedCreateGraphServiceServer struct {
+}
+
+func (*UnimplementedCreateGraphServiceServer) CreateGraph(context.Context, *CreateGraphRequest) (*CreateGraphResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateGraph not implemented")
+}
+
+func RegisterCreateGraphServiceServer(s *grpc.Server, srv CreateGraphServiceServer) {
+	s.RegisterService(&_CreateGraphService_serviceDesc, srv)
+}
+
+func _CreateGraphService_CreateGraph_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateGraphRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CreateGraphServiceServer).CreateGraph(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/hello.createGraphService/CreateGraph",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CreateGraphServiceServer).CreateGraph(ctx, req.(*CreateGraphRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _CreateGraphService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "hello.createGraphService",
+	HandlerType: (*CreateGraphServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "CreateGraph",
+			Handler:    _CreateGraphService_CreateGraph_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "hellopb/hello.proto",
+}
+
+// AddEdgeGraphServiceClient is the client API for AddEdgeGraphService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type AddEdgeGraphServiceClient interface {
+	AddEdgeToGraph(ctx context.Context, in *AddEdgeRequest, opts ...grpc.CallOption) (*AddEdgeResponse, error)
+}
+
+type addEdgeGraphServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewAddEdgeGraphServiceClient(cc grpc.ClientConnInterface) AddEdgeGraphServiceClient {
+	return &addEdgeGraphServiceClient{cc}
+}
+
+func (c *addEdgeGraphServiceClient) AddEdgeToGraph(ctx context.Context, in *AddEdgeRequest, opts ...grpc.CallOption) (*AddEdgeResponse, error) {
+	out := new(AddEdgeResponse)
+	err := c.cc.Invoke(ctx, "/hello.addEdgeGraphService/AddEdgeToGraph", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// AddEdgeGraphServiceServer is the server API for AddEdgeGraphService service.
+type AddEdgeGraphServiceServer interface {
+	AddEdgeToGraph(context.Context, *AddEdgeRequest) (*AddEdgeResponse, error)
+}
+
+// UnimplementedAddEdgeGraphServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedAddEdgeGraphServiceServer struct {
+}
+
+func (*UnimplementedAddEdgeGraphServiceServer) AddEdgeToGraph(context.Context, *AddEdgeRequest) (*AddEdgeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddEdgeToGraph not implemented")
+}
+
+func RegisterAddEdgeGraphServiceServer(s *grpc.Server, srv AddEdgeGraphServiceServer) {
+	s.RegisterService(&_AddEdgeGraphService_serviceDesc, srv)
+}
+
+func _AddEdgeGraphService_AddEdgeToGraph_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddEdgeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AddEdgeGraphServiceServer).AddEdgeToGraph(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/hello.addEdgeGraphService/AddEdgeToGraph",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AddEdgeGraphServiceServer).AddEdgeToGraph(ctx, req.(*AddEdgeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _AddEdgeGraphService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "hello.addEdgeGraphService",
+	HandlerType: (*AddEdgeGraphServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "AddEdgeToGraph",
+			Handler:    _AddEdgeGraphService_AddEdgeToGraph_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "hellopb/hello.proto",
+}
+
+// GetSPFGraphServiceClient is the client API for GetSPFGraphService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type GetSPFGraphServiceClient interface {
+	GetSPFFromGraph(ctx context.Context, in *GetSPFRequest, opts ...grpc.CallOption) (*GetSPFResponse, error)
+}
+
+type getSPFGraphServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewGetSPFGraphServiceClient(cc grpc.ClientConnInterface) GetSPFGraphServiceClient {
+	return &getSPFGraphServiceClient{cc}
+}
+
+func (c *getSPFGraphServiceClient) GetSPFFromGraph(ctx context.Context, in *GetSPFRequest, opts ...grpc.CallOption) (*GetSPFResponse, error) {
+	out := new(GetSPFResponse)
+	err := c.cc.Invoke(ctx, "/hello.getSPFGraphService/GetSPFFromGraph", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// GetSPFGraphServiceServer is the server API for GetSPFGraphService service.
+type GetSPFGraphServiceServer interface {
+	GetSPFFromGraph(context.Context, *GetSPFRequest) (*GetSPFResponse, error)
+}
+
+// UnimplementedGetSPFGraphServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedGetSPFGraphServiceServer struct {
+}
+
+func (*UnimplementedGetSPFGraphServiceServer) GetSPFFromGraph(context.Context, *GetSPFRequest) (*GetSPFResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSPFFromGraph not implemented")
+}
+
+func RegisterGetSPFGraphServiceServer(s *grpc.Server, srv GetSPFGraphServiceServer) {
+	s.RegisterService(&_GetSPFGraphService_serviceDesc, srv)
+}
+
+func _GetSPFGraphService_GetSPFFromGraph_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetSPFRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GetSPFGraphServiceServer).GetSPFFromGraph(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/hello.getSPFGraphService/GetSPFFromGraph",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GetSPFGraphServiceServer).GetSPFFromGraph(ctx, req.(*GetSPFRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _GetSPFGraphService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "hello.getSPFGraphService",
+	HandlerType: (*GetSPFGraphServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "GetSPFFromGraph",
+			Handler:    _GetSPFGraphService_GetSPFFromGraph_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "hellopb/hello.proto",
+}
+
+// DeleteGraphServiceClient is the client API for DeleteGraphService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type DeleteGraphServiceClient interface {
+	DeleteGraph(ctx context.Context, in *DeleteGraphRequest, opts ...grpc.CallOption) (*DeleteGraphResponse, error)
+}
+
+type deleteGraphServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewDeleteGraphServiceClient(cc grpc.ClientConnInterface) DeleteGraphServiceClient {
+	return &deleteGraphServiceClient{cc}
+}
+
+func (c *deleteGraphServiceClient) DeleteGraph(ctx context.Context, in *DeleteGraphRequest, opts ...grpc.CallOption) (*DeleteGraphResponse, error) {
+	out := new(DeleteGraphResponse)
+	err := c.cc.Invoke(ctx, "/hello.deleteGraphService/DeleteGraph", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// DeleteGraphServiceServer is the server API for DeleteGraphService service.
+type DeleteGraphServiceServer interface {
+	DeleteGraph(context.Context, *DeleteGraphRequest) (*DeleteGraphResponse, error)
+}
+
+// UnimplementedDeleteGraphServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedDeleteGraphServiceServer struct {
+}
+
+func (*UnimplementedDeleteGraphServiceServer) DeleteGraph(context.Context, *DeleteGraphRequest) (*DeleteGraphResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteGraph not implemented")
+}
+
+func RegisterDeleteGraphServiceServer(s *grpc.Server, srv DeleteGraphServiceServer) {
+	s.RegisterService(&_DeleteGraphService_serviceDesc, srv)
+}
+
+func _DeleteGraphService_DeleteGraph_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteGraphRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DeleteGraphServiceServer).DeleteGraph(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/hello.deleteGraphService/DeleteGraph",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DeleteGraphServiceServer).DeleteGraph(ctx, req.(*DeleteGraphRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _DeleteGraphService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "hello.deleteGraphService",
+	HandlerType: (*DeleteGraphServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "DeleteGraph",
+			Handler:    _DeleteGraphService_DeleteGraph_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

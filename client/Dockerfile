@@ -1,8 +1,6 @@
 # Pull latest Golang 1.14
 FROM golang
 
-RUN apt-get update && apt-get install vim -y 
-
 # Set the env 
 ENV GO111MODULE=auto
 ENV GOROOT /usr/local/go
@@ -19,6 +17,10 @@ ADD . /go/src/github.com/vasu81in/simple-grpc
 # Get the source from GitHub
 RUN go get google.golang.org/grpc
 
+# Install third party packages
+RUN go get github.com/sirupsen/logrus
+RUN go get github.com/yourbasic/graph
+
 # Install protoc-gen-go
 RUN go get github.com/golang/protobuf/protoc-gen-go
 
@@ -26,5 +28,5 @@ RUN go get github.com/golang/protobuf/protoc-gen-go
 RUN go install /go/src/github.com/vasu81in/simple-grpc/cmd/helloclient
 
 # Set the ENTRY for the APP
-#ENTRYPOINT ["/go/bin/helloclient"]
+# ENTRYPOINT ["/go/bin/helloclient"]
 

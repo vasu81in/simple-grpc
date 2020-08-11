@@ -3,14 +3,59 @@ syntax = "proto3";
 package hello;
 option go_package = "hellopb";
 
-message helloRequest {
-    string name = 1;
+message createGraphRequest {
+	int32 size = 1;
+	string clientId = 2;
 }
 
-message helloResponse {
-    string greeting = 1;
+message createGraphResponse {
+	string graphId = 1;
 }
 
-service helloService {
-    rpc Hello(helloRequest) returns (helloResponse) {};
+service createGraphService {
+	rpc CreateGraph(createGraphRequest) returns (createGraphResponse) {};
 }
+
+message addEdgeRequest {
+	string graphId = 1;
+	string clientId = 2;
+	int32 vertexA = 3;
+	int32 vertexB = 4;
+}
+
+message addEdgeResponse {
+	bool success = 1;
+}
+
+service addEdgeGraphService {
+	rpc AddEdgeToGraph(addEdgeRequest) returns (addEdgeResponse) {};
+}
+
+message getSPFRequest {
+	string graphId = 1;
+	string clientId = 2;
+	int32 vertexA = 3;
+	int32 vertexB = 4;
+}
+
+message getSPFResponse {
+	int32 distance = 1;
+}
+
+service getSPFGraphService {
+	rpc GetSPFFromGraph(getSPFRequest) returns (getSPFResponse) {};
+}
+
+message deleteGraphRequest{
+	string graphId = 1;
+	string clientId = 2;
+}
+
+message deleteGraphResponse {
+	bool success = 1;
+}
+
+service deleteGraphService {
+	rpc DeleteGraph(deleteGraphRequest) returns (deleteGraphResponse) {};
+}
+

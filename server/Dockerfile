@@ -20,6 +20,10 @@ RUN go get google.golang.org/grpc
 # Install protoc-gen-go
 RUN go get github.com/golang/protobuf/protoc-gen-go
 
+# Install third party packages
+RUN go get github.com/sirupsen/logrus
+RUN go get github.com/yourbasic/graph
+
 # Install APP server
 RUN go install /go/src/github.com/vasu81in/simple-grpc/cmd/helloserver
 
