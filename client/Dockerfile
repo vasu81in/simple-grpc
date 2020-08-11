@@ -1,3 +1,9 @@
+# Author:       Vasu Mahalingam
+# Email:        vasu.uky@gmail.com
+# Date:         2020-08-10
+#
+
+
 # Pull latest Golang 1.14
 FROM golang
 

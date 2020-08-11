@@ -1,3 +1,10 @@
+// Author:       Vasu Mahalingam
+// Email:        vasu.uky@gmail.com
+// Date:         2020-08-10
+
+// The package exposes server side RPC
+// methods for the clients to send CRUD requests.
+
 package main
 
 import (

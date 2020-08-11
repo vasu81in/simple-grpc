@@ -1,3 +1,7 @@
+// Author:       Vasu Mahalingam
+// Email:        vasu.uky@gmail.com
+// Date:         2020-10-09
+
 package graphlib_test
 
 import (

@@ -1,3 +1,10 @@
+// Author:       Vasu Mahalingam
+// Email:        vasu.uky@gmail.com
+// Date:         2020-08-10
+
+// The package exposes client side CLIs
+// to send CRUD requests.
+
 package main
 
 import (

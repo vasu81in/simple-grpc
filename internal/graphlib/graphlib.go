@@ -1,3 +1,16 @@
+// Author:       Vasu Mahalingam
+// Email:        vasu.uky@gmail.com
+// Date:         2020-08-10
+
+// The package abstracts yourbasic graph.
+// Maintains a global GraphDB to track the
+// graph resources created by the clients.
+// It ensures the same client to have read/write
+// rights to the graph objects it created.
+// If rogue Client issues a request, the 
+// server rejects the request silently. Error
+// handling/help messages could be better.
+
 package graphlib
 
 import (

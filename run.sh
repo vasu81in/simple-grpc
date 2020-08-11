@@ -1,5 +1,14 @@
 #!/bin/sh -x
 
+
+# Author:       Vasu Mahalingam
+# Email:        vasu.uky@gmail.com
+# Date:         2020-08-10
+#
+# Quick and dirty help script for creating and
+# managing simple gRPC container resources
+
+
 source ./dockerCleanupScript.sh
 
 cleanDocker() {

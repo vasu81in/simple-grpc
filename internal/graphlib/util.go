@@ -2,8 +2,8 @@ package graphlib
 
 import (
 	"fmt"
-	"strings"
 	"runtime"
+	"strings"
 )
 
 // return the source filename after the last slash
